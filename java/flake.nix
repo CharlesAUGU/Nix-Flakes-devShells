@@ -21,7 +21,7 @@
   outputs = { self, nixpkgs, flake-parts, nix-vscode-extensions }@inputs:
 
     # mkFlake is the main function of flake-parts to build a flake with standardized arguments
-    flake-parts.lib.mkFlake { inherit self; inherit inputs; } {        
+    flake-parts.lib.mkFlake { inherit self; inherit inputs; } {
 
       # list of systems to be built upon
       systems = nixpkgs.lib.systems.flakeExposed;
